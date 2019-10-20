@@ -1,0 +1,16 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('*** LEITOR DE GÊNERO ***')
+sexo = str(input('Qual o seu sexo [F/M]? ')).upper().strip()[0]#[0] para pegar apenas a primeira letra
+while sexo not in 'FM':
+    print('\n\033[31mOpção inválida! Digite novamente.\033[m')
+    sexo = str(input('Qual é o seu sexo [F/M]? ')).upper().strip()[0]
+print('\nSexo {} registrado com sucesso.'.format(sexo))
+'''if sexo == 'F':
+    print('\nFEMININO')
+    elif sexo == 'M':
+    print('\nMASCULINO')'''
+print('\nFIM')
+
+#Aparentemente o OR com a condição WHILE e FOR faz o loop ficar infinito, pois sempre uma condição será satisfeita.
