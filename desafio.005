@@ -1,0 +1,6 @@
+python 3
+# -*- coding: utf-8 -*-
+
+n = int(input('Digite um número: '))
+print('O antecessor deste número é {} e o sucessor {}.'.format(n-1, n+1))
+print('O dobro é {}, o triplo {} e a raíz quadrada {}.'.format(n*2, n*3, n**(1/2)))
