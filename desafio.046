@@ -1,0 +1,17 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n', '=#'*8,'FOGOS DE ARTIFÍCIO', '=#'*8, '\n')
+      
+import vlc
+import emoji
+from time import sleep
+
+print('VAI COMEÇAR...\n')
+sleep(1)
+for c in range(10, -1, -1): #Na regressiva, se não colocar o passo não haverá contagem.
+    print(c)
+    sleep(1)
+print(emoji.emojize(':sparkles: :boom:'*10, use_aliases=True))
+p = vlc.MediaPlayer('/home/anderson/Music/Sounds/Gravação de áudio 2018-12-13 19-52-29_Fireworks.wav')
+p.play()
