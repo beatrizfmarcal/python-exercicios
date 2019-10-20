@@ -1,0 +1,19 @@
+python3
+# -*- coding: utf-8 -*-
+
+nex = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco',
+       'seis', 'sete', 'oito', 'nove', 'dez', 'onze',
+       'doze', 'treze', 'catorze', 'quinze', 'dezesseis',
+       'dezessete', 'dezoito', 'dezenove', 'vinte')
+continua = ''
+while continua != 'N':
+    n = int(input('Digite um número entre 0 e 20: '))
+    while n < 0 or n > 20:
+        print('\033[31mDigite um número válido!\033[m')
+        n = int(input('Digite um número entre 0 e 20: '))
+    print('O número digitado foi {}.'.format(nex[n]))
+    continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    while continua not in 'SN':
+        print('\033[31mOpção inválida! Digite novamente.\033[m')
+        continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+print('FIM')  
