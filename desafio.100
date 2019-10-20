@@ -1,0 +1,32 @@
+python3
+# -*- coding: utf-8 -*-
+
+from time import sleep
+from random import randint
+
+lista = []
+
+
+def sorteia():
+    print('Os 5 valores sorteados foram:',end=' ')
+    for c in range(0, 5):
+        c = randint(0, 100)
+        lista.append(c)
+        print(c, end=' ')
+        sleep(0.5)        
+    print('FIM!')
+
+
+sorteia()
+print(lista)
+
+
+def somapar():
+    soma = 0
+    for c1 in range(0, 5):
+        if lista[c1] % 2 == 0:
+            soma += lista[c1]
+    print(f'A soma dos valores pares da lista é: {soma}.')
+
+
+somapar()
