@@ -1,0 +1,18 @@
+python3
+# -*- coding: utf-8 -*-
+
+lista = []
+continua = ''
+while continua != 'N':
+    lista.append(int(input('Digite um valor: ')))
+    continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    while continua not in 'SN':
+        print('\033[31mOpção inválida! Digite novamente.\033[m')
+        continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+print('-'*40)
+print('Foram digitados {} valores.'.format(len(lista)))
+print(f'A lista de números digitados em ordem decrescente é: {sorted(lista, reverse=True)}') 
+if 5 in lista:
+    print('O valor 5 foi digitado e está na lista.')
+else:
+    print('O valor 5 não foi digitado e não está na lista.')
