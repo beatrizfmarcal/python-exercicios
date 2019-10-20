@@ -1,0 +1,15 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('#=#=# CAMPEONATO BRASILEIRO 2018 #=#=#\n')
+times = ('Palmeiras', 'Flamengo', 'Internacional', 'Grêmio',
+         'São Paulo', 'Atlético-MG', 'Athletico-PR', 'Cruzeiro',
+         'Botafogo', 'Santos', 'Bahia', 'Fluminense', 'Corinthians',
+         'Chapecoense', 'Ceará', 'Vasco', 'Sport', 'América-MG',
+         'Vitória', 'Paraná')
+for time in times:
+    print(time)
+print('\n-Os cinco primeiros colocados do Campeonato Brasileiro 2018: {}'.format(times[0:5]))
+print('\n-Os quatro últimos colocados da tabela: {}'.format(times[-4:]))
+print('\n-Os times participantes do campeonato pela série A, em ordem alfabética: {}'.format(sorted(times)))
+print('\n-Posição da Chapecoense: {}ª'.format(times.index('Chapecoense')+1))
