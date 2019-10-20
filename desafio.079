@@ -1,0 +1,18 @@
+python3
+# -*- coding: utf-8 -*-
+
+lista = []
+continua = ''
+while continua != 'N':
+    n = int(input('Digite um número: '))
+    if n not in lista:
+        lista.append(n)
+        print('\033[32mNúmero adicionado com sucesso!\033[m')
+    else:
+        print('\033[31mEste número já foi adicionado! Tente outro.\033[m')
+    continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    while continua not in 'SN':
+        print('\033[31mOpção inválida! Tente novamente.\033[m')
+        continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+lista.sort()
+print('Os números adicionados foram: {}'.format(lista))
