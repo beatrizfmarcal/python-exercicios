@@ -1,0 +1,8 @@
+python3
+# -*- coding: utf-8 -*-
+
+import math
+
+angulo = int(input('Insira um ângulo em graus: '))
+angulorad = math.radians(angulo)
+print('O valor do seno do ângulo de {}º é {:.2f}, do cosseno {:.2f} e da tangente {:.2f}.'.format(angulo, math.sin(angulorad), math.cos(angulorad), math.tan(angulorad)))
