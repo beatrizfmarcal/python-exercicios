@@ -1,0 +1,21 @@
+python3
+# -*- coding: utf-8 -*-
+
+jogador = {}
+jogador['nome'] = str(input('Nome do(a) jogador(a): '))
+partidas = int(input(f'Nº de partidas que {jogador["nome"]} jogou: '))
+gols = []
+for p in range(1, partidas+1):
+    gols.append(int(input(f'Nº de gols na partida {p}: ')))
+jogador['gols'] = gols
+jogador['total de gols'] = sum(gols)
+print('=-'*30)
+print(jogador)
+print('=-'*30)
+for k, v in jogador.items():
+    print(f'O campo {k} tem o valor {v}.')
+print('=-'*30)
+print(f'O(A) jogador(a) {jogador["nome"]} jogou {partidas} partidas.')
+for pos, g in enumerate(jogador['gols']):
+    print(f'-> Na partida {pos + 1}, {jogador["nome"]} fez {g} gols.')
+print(f'No total, foram {jogador["total de gols"]} gols marcados.')
