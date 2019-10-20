@@ -1,0 +1,19 @@
+python3
+# -*- coding: utf-8 -*-
+
+from datetime import date
+
+print('\n', '*'*6, 'CONFEDERAÇÃO NACIONAL DE NATAÇÃO', '*'*6)
+nascimento = int(input('Insira o ano de nascimento do(a) atleta: '))
+ano = date.today().year
+print('\nO(A) atleta tem {} anos.'.format(ano - nascimento))
+if (ano - nascimento) <= 9:
+    print('A categoria do(a) atleta é MIRIM.')
+elif (ano - nascimento) <= 14:
+    print('A categoria do(a) atleta é INFANTIL.')
+elif (ano - nascimento) <= 19:
+    print('A categoria do(a) atleta é JÚNIOR.')
+elif (ano - nascimento) <= 20:
+    print('A categoria do(a) atleta é SÊNIOR.')
+else:
+    print('A categoria do(a) atleta é MASTER.')
