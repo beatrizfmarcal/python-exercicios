@@ -1,0 +1,35 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n*** FATORIAL ***')
+
+from math import factorial
+
+x = int(input('Digite um número para obter seu valor fatorial: '))
+print('\nO fatorial de {}! é {}.'.format(x, factorial(x)))
+
+###################################################
+
+n = int(input('Digite um número para obter seu valor fatorial: '))
+print('\n')
+fat = 1
+for n in range (n, 1-1, -1):
+    fat *= n
+    if n > 1:
+        print(n, end='*')
+    elif n == 1:
+        print(n, end='=')
+print(fat)
+
+####################################################
+
+num = int(input('Digite um número para obter seu valor fatorial: ')) 
+print('\n')
+fator = num
+mult = 1
+while fator >= 1:
+    print(fator, 'x ' if fator > 1 else '= ', end='')
+    mult *= fator
+    fator -= 1   
+print(mult)
+   
