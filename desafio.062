@@ -1,0 +1,34 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n*** PROGRESSÃO ARITMÉTICA ***')
+a1 = int(input('-Primeiro termo da P.A.: '))
+r = int(input('-Razão da P.A.: '))
+an = 0 #Contador
+mais = 10 #O exerício pedia, inicialmente, que fossem mostrados 10 elementos.
+total = 0
+while mais != 0:
+    total += mais
+    while an < total:
+        an += 1    
+        print('{} -> '.format(a1), end='')
+        a1 += r
+    print('PAUSA')
+    mais = int(input('-Deseja mostrar mais alguns termos? Digite quantos: '))
+print('\nProgressão finalizada com {} termos mostrados.'.format(total))
+
+   
+'''
+while an < 10:
+    an += 1    
+    print('{} -> '.format(a1), end='')
+    a1 += r
+print('FIM')
+while mais != 0:
+    mais = int(input('\n-Deseja mostrar mais alguns termos? Digite quantos: '))
+    print('\n')
+    for an1 in range(1, mais+1):   
+        print('{} -> '.format(a1), end='')
+        a1 += r
+    print('FIM')
+'''
