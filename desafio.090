@@ -1,0 +1,15 @@
+python3
+# -*- coding: utf-8 -*-
+
+alunos = {}
+alunos['nome'] = str(input('Nome: '))
+alunos['média'] = float(input(f'Média de {alunos["nome"]}: '))
+print(alunos)
+if alunos['média'] >= 7:
+    alunos['situação'] = 'Aprovado'
+elif 5 <= alunos['média'] < 7:
+    alunos['situação'] = 'Recuperação'
+else:
+    alunos['situação'] = 'Reprovado'
+for k, v in alunos.items():
+    print(f'{k.capitalize()} é igual a {v}.')    
