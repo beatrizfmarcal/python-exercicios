@@ -1,0 +1,34 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n')
+print('#-'*10)
+n1 = float(input('Digite um número: '))
+n2 = float(input('Digite outro número: '))
+opção = ''
+while opção != '5':
+    print('''\n---- MENU DE OPÇÕES ----
+ [1] Somar
+ [2] Multiplicar
+ [3] Maior
+ [4] Novos números
+ [5] Sair''')
+    opção = str(input('\033[34mDigite sua opção:\033[m '))
+    if opção == '1':
+        print('\nA soma dos números {} e {} é {}.'.format(n1, n2, (n1 + n2)))
+    elif opção == '2':
+        print('\nA multiplicação dos números {} e {} é {}.'.format(n1, n2, (n1 * n2)))
+    elif opção == '3':
+        if n1 > n2:
+            print('\nO maior número digitado foi {}.'.format(n1))
+        elif n2 > n1:
+            print('\nO maior número digitado foi {}.'.format(n2))
+        else:
+            print('\nOs dois números digitados são iguais.')
+    elif opção == '4':
+        n1 = float(input('Digite um número: '))
+        n2 = float(input('Digite outro número: '))
+    elif opção not in '12345':
+        print('\n\033[31mOpção inválida! Digite uma opção válida.\033[m')
+print('\n---FIM---')
+        
