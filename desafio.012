@@ -1,0 +1,5 @@
+python3
+# -*- coding: utf-8 -*-
+
+p = float(input('Preço do produto: R$ '))
+print('Com o desconto de 5% da liquidação este produto sai por R$ {:.2f}.'.format(p*0.95))
