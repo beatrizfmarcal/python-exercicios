@@ -1,0 +1,18 @@
+python3
+# -*- coding: utf-8 -*-
+
+def voto(AnoNasc):
+    from datetime import date # dentro deste escopo para economizar memória
+    AnoAtual = date.today().year
+    if AnoAtual - AnoNasc < 16:
+        return f'Com {AnoAtual - AnoNasc} anos: NÃO VOTA.'
+    elif AnoAtual - AnoNasc >= 16 and AnoAtual - AnoNasc < 18:
+        return f'Com {AnoAtual - AnoNasc} anos: VOTO FACULTATIVO.'
+    elif AnoAtual - AnoNasc >= 18 and AnoAtual - AnoNasc < 65:
+        return f'Com {AnoAtual - AnoNasc} anos: VOTO OBRIGATÓRIO.'
+    elif AnoAtual - AnoNasc >= 65:
+        return f'Com {AnoAtual - AnoNasc} anos: VOTO FACULTATIVO.'
+
+
+print(voto(1992))
+        
