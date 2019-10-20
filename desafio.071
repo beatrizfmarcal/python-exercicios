@@ -1,0 +1,67 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('-'*50)
+print('{:^50}'.format('BANCO CASA JACARANDÁ'))
+print('-'*50)
+print('\n\033[32mBem vindo(a)!\033[m')
+valor = int(input('Digite o valor do saque: R$ '))
+while valor > 3000:
+    print('\033[31mValor superior ao limite diário autorizado. Por gentileza, insira um valor abaixo de R$ 3,000.00.\033[m')
+    valor = int(input('Digite o valor do saque: R$ '))
+um = valor % 10
+dez = ((valor - um) % 100) / 10
+cinquenta = valor // 50
+vinte = ((dez * 10) // 20)
+print('-'*50)
+if cinquenta >= 1:
+    print('Total de notas de R$ 50: {}'.format(cinquenta))
+if (vinte == 1 or vinte == 3) and ((valor - um) % 100 != 60):
+    print('Total de notas de R$ 20: 1')
+if vinte == 4 and ((valor - um) % 100 == 80):
+    print('Total de notas de R$ 20: 1')
+if (vinte == 2 or vinte == 4) and ((valor - um) % 50 != 0) and ((valor - um) % 100 != 80):
+    print('Total de notas de R$ 20: 2')
+if dez == 1 or dez == 3 or dez == 6 or dez == 8:
+    print('Total de notas de R$ 10: 1')
+if um >= 1:
+    print('Total de notas de R$ 1: {}'.format(um))
+print('-'*50)
+print('''\033[32mBanco Casa Jacarandá
+Muito bom!\033[m''')
+
+#############################################################
+
+saque = int(input('Digite o valor do saque: R$ '))
+cédula = 50
+totcédula = 0
+while True:
+    if saque >= cédula:
+        saque -= cédula
+        totcédula += 1
+    else:
+        if totcédula > 0:
+            print(f'Total de notas de R${cédula}: {totcédula}')
+        if cédula == 50:
+            cédula = 20
+        elif cédula == 20:
+            cédula = 10
+        elif cédula == 10:
+            cédula = 1
+        totcédula = 0
+        if saque == 0:
+            break
+print('FIM')
+
+#############################################################
+
+saque1 = int(input('Sacar R$: '))
+cedulas = [1, 10, 20, 50]
+c = 3
+while saque1 > 0:
+    qtdced = saque1 // cedulas[c]
+    saque1 -= qtdced * cedulas[c]
+    if qtdced > 0:
+        print(f'{qtdced} cédulas de R$ {cedulas[c]}')
+    c -= 1
+        
