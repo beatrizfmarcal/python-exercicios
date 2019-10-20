@@ -1,0 +1,31 @@
+python3
+# -*- coding: utf-8 -*-
+
+def notas(* nota, sit=0):
+    """
+    Função para analisar notas e situação de vários alunos.
+    - Parâmetro nota: notas dos alunos
+    - Parâmetro sit: Situação do aluno (Ruim, Regular, Boa e Ótima)
+    É opcional, sit=True ou sit=False.
+    - return: retorna um dicionário com a quantidade de notas informadas,
+    maior nota, menor nota, média e situação.
+    """
+    infoNotas = {}        
+    infoNotas['qtd'] = len(nota)
+    infoNotas['maior'] = max(nota)
+    infoNotas['menor'] = min(nota)
+    infoNotas['média'] = round(sum(nota) / len(nota), 2)
+    if sit is True:
+        if infoNotas['média'] >= 8.5:
+            infoNotas['situação'] = 'Ótima'
+        elif infoNotas['média'] >= 7:
+            infoNotas['situação'] = 'Boa'
+        elif infoNotas['média'] >= 5:
+            infoNotas['situação'] = 'Regular'
+        elif infoNotas['média'] < 5:
+            infoNotas['situação'] = 'Ruim'
+    return infoNotas
+
+
+print(notas(8, 3, 7.5, 8.7, 4.3, 9.5, sit=True))
+help(notas)
