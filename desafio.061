@@ -1,0 +1,12 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n*** PROGRESSÃO ARITMÉTICA ***')
+a1 = int(input('-Primeiro termo da P.A.: '))
+r = int(input('-Razão da P.A.: '))
+an = 0 #Contador
+while an < 10:
+    an += 1    
+    print('{} -> '.format(a1), end='')
+    a1 += r
+print('FIM')
