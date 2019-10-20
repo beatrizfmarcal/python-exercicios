@@ -1,0 +1,29 @@
+python3
+# -*- coding: utf-8 -*-
+
+from random import randint
+tupla = ([]) # na verdade é uma lista
+for c in range(0,5):
+    num1 = randint(0, 100)
+    tupla.append(num1)
+print(tupla)
+print('O maior valor sorteado foi {} e o menor {}.'.format(max(tupla), min(tupla)))
+
+##########################################
+
+n1 = randint(0, 100)
+n2 = randint(0, 100)
+n3 = randint(0, 100)
+n4 = randint(0, 100)
+n5 = randint(0, 100)
+# ou n = (randint(0, 100), (randint(0, 100), (randint(0, 100), ...)
+tupla1 = n1, n2, n3, n4, n5
+print(tupla1)
+print('O maior valor sorteado foi {} e o menor {}.'.format(max(tupla1), min(tupla1)))
+
+##########################################
+
+from random import sample
+t = tuple(sample(range(100), 5))
+print(t)
+print('O maior valor é {} e o menor é {}.'.format(max(t), min(t)))
