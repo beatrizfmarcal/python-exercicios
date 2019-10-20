@@ -1,0 +1,23 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n', '*'*6, 'TRIÂNGULOS', '*'*6)
+r1 = float(input('Primeira reta: '))
+r2 = float(input('Segunda reta: '))
+r3 = float(input('Terceira reta: '))
+if (r1+r2)>r3 and (r2+r3)>r1 and (r1+r3)>r2:
+    print('\n\033[32mÉ possível formar um triângulo com as três retas informadas.\033[m')
+    if r1 != r2 != r3 !=r1:
+        print('E o triângulo formado é do tipo \033[4mEscaleno\033[m.')
+    elif r1 == r2 == r3:
+        print('E o triângulo formado é do tipo \033[4mEquilátero\033[m.')
+    else:
+        print('E o triângulo formado é do tipo \033[4mIsósceles\033[m.')
+else:
+    print('\n\033[31mNão é possível formar um triângulo com as retas informadas.\033[m')
+print('\n--FIM--')
+
+#print('Os segmenots podem formar um triângulo ', end='')
+#print('Equilátero!')
+#print('Isósceles!')
+#print('Escaleno!')
