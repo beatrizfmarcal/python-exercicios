@@ -1,0 +1,23 @@
+python3
+# -*- coding: utf-8 -*-
+
+listagem = ('Pão', 11,
+            'Manteiga', 10,
+            'Leite', 2.9,
+            'Aveia', 1.7,
+            'Iogurte', 7)
+print('{:-^59}'.format(' LISTA DE COMPRAS '))
+
+print('''{:.<50} R$ {:>5.2f}
+{:.<50} R$ {:>5.2f}
+{:.<50} R$ {:>5.2f}
+{:.<50} R$ {:>5.2f}
+{:.<50} R$ {:>5.2f}'''.format(listagem[0], listagem[1], listagem[2], listagem[3], listagem[4], listagem[5], listagem[6], listagem[7], listagem[8], listagem[9]))
+
+# ou:
+print('#'*50)
+for pos in range(0, len(listagem)):
+    if pos % 2 == 0: # para saber se é o item ou o preço
+        print(f'{listagem[pos]:.<50}', end='')
+    if pos % 2 == 1:
+        print(f' R$ {listagem[pos]:>5.2f}')
