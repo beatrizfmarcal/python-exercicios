@@ -1,0 +1,7 @@
+python3
+# -*- coding: utf-8 -*-
+
+from math import trunc
+
+nreal = float(input('Digite um número real: '))
+print('A parte inteira do número inserido é {}.'.format(trunc(nreal)))
