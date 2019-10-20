@@ -1,0 +1,49 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('='*40)
+print('{:^40}'.format('MATRIZES'))
+print('='*40)
+n = []
+matriz = []
+for l in range(0, 3):
+    for c in range(0, 3):
+        n.append(int(input('Digite um valor para [{}, {}]: '.format(l, c))))
+        matriz.append(n[:])
+        n.clear()
+print(f'''{matriz[0]} {matriz[1]} {matriz[2]}
+{matriz[3]} {matriz[4]} {matriz[5]}
+{matriz[6]} {matriz[7]} {matriz[8]}''')
+somap = 0
+for [num] in matriz: #quando coloquei entre colchetes reconheceu com int e não lista.
+    if num % 2 == 0:
+        somap += num
+print(f'A soma de todos os números pares da matriz é {somap}.')
+soma3c = 0
+for [nume] in matriz[2:9:3]:
+    soma3c += nume
+print(f'A soma dos valores da terceira coluna é {soma3c}.')    
+[maior2l] = max(matriz[3:5+1])
+print(f'O maior valor entre os números da segunda linha é {maior2l}.')
+
+######################################################
+
+matriz1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+somp = mail = somc = 0
+for l in range(0, 3): # for de alimentação da matriz
+    for c in range(0, 3): 
+        matriz1[l][c] = int(input(f'Digite um valor para [{l}, {c}]: '))
+for l in range(0, 3):
+    somc += matriz1[l][2]
+    for c in range(0, 3):
+        if c == 0:
+            mail = matriz1[1][c]
+        elif matriz1[1][c] > mail:
+            mail = matriz1[1][c]
+        print(f'[{matriz1[l][c]:^6}]', end='')
+        if matriz1[l][c] % 2 == 0:
+            somp += matriz1[l][c]
+    print() # o print vazio pula linha e, nesta identação, pulará a cada linha completa da matriz.
+print(f'A soma dos números pares da matriz é {somp}.')   
+print(f'A soma dos valores da terceira coluna é {somc}.')
+print(f'O maior valor da segunda linha é {mail}.')
