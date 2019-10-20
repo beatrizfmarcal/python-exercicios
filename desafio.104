@@ -1,0 +1,16 @@
+python3
+# -*- coding: utf-8 -*-
+
+
+def leiaInt(n=0):
+    while True:
+        try:
+            n = int(input('Digite um número inteiro: '))            
+        except(ValueError):
+            print('\033[031mErro! Insira um número inteiro.\033[m')
+        else:
+            print(f'Você digitou o número {n} e ele é inteiro.')
+            break
+
+
+leiaInt()
