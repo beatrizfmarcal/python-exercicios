@@ -1,0 +1,26 @@
+python3
+# -*- coding: utf-8 -*-
+
+
+def fatorial(n, show=0):
+    """
+    Calcula o Fatorial de um número.
+    - Parâmetro n: Número a ser calculado.
+    - Parâmetro show: Mostra o cálculo na tela.
+    - return: Retorna o valor fatorial de um número n.
+    """
+    if show is True:
+        for c in range(n, 0, -1):
+            if c > 1:
+                print(c, end=' x ')
+            elif c == 1:
+                print(c, end=' = ')
+    f = 1
+    for c in range(n, 0, -1):
+        f *= c
+    return f
+
+
+print(fatorial(6, True))
+print(fatorial(4))
+help(fatorial)
