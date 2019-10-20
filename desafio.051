@@ -1,0 +1,20 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n*** PROGRESSÃO ARITMÉTICA ***')
+a1 = int(input('Primeiro termo da P.A.: '))
+r = int(input('Razão da P.A.: '))
+an = a1 + (10 - 1)*r
+print('\nOs 10 primeiros termos desta P.A. são:\n')
+for c in range(a1, an+r,  r):
+    print(c, end=' ') #end=' ' para ficar na mesma linha
+print('\n\n--FIM--')
+
+##################################################
+
+num = int(input('\nDigite o Primeiro número da PA: '))
+razão = int(input('Digite a Razão da PA: '))
+for c in range(1, 11):
+    print('\nO termo a{} desta P.A. é {}.'.format(c, num))
+    num += razão #Se colocar antes do print o a1 não será contabilizado.   
+print('\n--FIM--')
