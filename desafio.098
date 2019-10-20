@@ -1,0 +1,37 @@
+python3
+# -*- coding: utf-8 -*-
+
+from time import sleep
+
+def contador(i, f, p):
+    p = abs(p)
+    if p == 0:
+        p = 1  
+    print('=' * 40)
+    print(f'Contagem de {i} até {f} de {p} em {p}:')
+    sleep(0.5)
+    if f < i:
+        c = i
+        while c >= f:
+            print(c, end=' ')
+            sleep(0.2)
+            c -= p
+        print('FIM!')
+        print('=' * 40)
+    else:
+        c1 = i
+        while c1 <= f:
+            print(c1, end=' ')
+            sleep(0.2)
+            c1 += p
+        print('FIM!')
+        print('=' * 40)
+
+
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('Agora é a sua vez de personalizar a contagem!')
+i = int(input('Início: '))
+f = int(input('Fim: '))
+p = int(input('Passo: '))
+contador(i, f, p)
