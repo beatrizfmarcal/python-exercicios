@@ -1,0 +1,54 @@
+python3
+# -*- coding: utf-8 -*-
+
+num1 = input('Primeiro número: ')
+num2 = input('Segundo número: ')
+num3 = input('Terceiro número: ')
+lista = [num1, num2, num3]
+ordem = sorted(lista)
+print('O maior número é \033[3;31m{}\033[m e o menor \033[3;31m{}\033[m.'.format(ordem[2], ordem[0]))
+
+#######################################
+
+n1 = float(input('Primeiro número: '))
+n2 = float(input('Segundo número: '))
+n3 = float(input('Terceiro número: '))
+print('Maior número: {}.'.format(max(n1, n2, n3)))
+print('Menor número: {}.'.format(min(n1, n2, n3)))
+
+########################################
+
+n01 = float(input('Primeiro número: '))
+n02 = float(input('Segundo número: '))
+n03 = float(input('Terceiro número: '))
+if n01>n02 and n01>n03:
+    print('O maior número é {}.'.format(n01))
+if n02>n01 and n02>n03:
+    print('O maior número é {}.'.format(n02))
+if n03>n01 and n03>n02:
+    print('O maior número é {}.'.format(n03))
+if n01<n02 and n01<n03:
+    print('O menor número é {}.'.format(n01))
+if n02<n01 and n02<n03:
+    print('O menor número é {}.'.format(n02))
+if n03<n01 and n03<n02:
+    print('O maior número é {}.'.format(n03))
+print('--FIM--')
+
+#########################################
+
+a = int(input('-'))
+b = int(input('-'))
+c = int(input('-'))
+menor = a
+if b<a and b<c:
+    menor = b
+if c<a and c<b:
+    menor = c
+maior = a
+if b>a and b>c:
+    maior = b
+if c>a and c>b:
+    maior = c
+print(menor)
+print(maior)
