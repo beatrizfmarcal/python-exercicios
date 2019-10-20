@@ -1,0 +1,22 @@
+python3
+# -*- coding: utf-8 -*-
+
+continua = ''
+lista = []
+while continua != 'N':
+    lista.append(int(input('Digite um número: ')))
+    continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    while continua not in 'SN':
+        print('\033[31mOpção inválida! Tente novamente.\033[m')
+        continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+print('A lista com todos os números inseridos é:', lista)
+listap = []
+for n in lista:
+    if n % 2 == 0:
+        listap.append(n)
+print('A lista somente com os números pares inseridos é:', listap)
+listai = []
+for n in lista:
+    if n % 2 == 1:
+        listai.append(n)
+print('A lista somente com os números ímpares inseridos é:', listai)
