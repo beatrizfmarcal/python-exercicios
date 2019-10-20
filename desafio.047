@@ -1,0 +1,9 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n', '*'*8, 'NÚMEROS PARES ENTRE 1 E 50', '*'*8, '\n')
+for c in range(1+1, 50+1, 2):
+    print(c)
+print('\n--FIM--')
+
+#Se fizesse com c % 2 == 0 o programa ficaria mais pesado, pois o laço seria repetido mais vezes.
