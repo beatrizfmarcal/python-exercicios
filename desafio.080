@@ -1,0 +1,49 @@
+python3
+# -*- coding: utf-8 -*-
+
+lista = []
+for c in range(0, 5):
+    n = int(input('Insira um número: '))
+    if c == 0:
+        lista.append(n)
+        print('O valor foi adicionado ao final da lista.')
+    else:
+        if n >= lista[-1]:
+            lista.append(n)
+            print('O valor foi adicionado ao final da lista.')
+        elif n <= lista[0]:
+            lista.insert(0, n)
+            print('O valor foi adicionado na posição 0 da lista.')
+        elif n > lista[0] and n > lista[1]:
+            lista.insert(2, n)
+            print('O valor foi adicionado na posição 2 da lista.')
+        elif n >= lista[0]:
+            lista.insert(1, n)
+            print('O valor foi adicionado na posição 1 da lista.')
+print(lista)    
+
+###################################################################
+
+lista1 = []
+for p in range(5):
+    n1 = int(input('Número: '))
+    if p == 0 or n1 > lista1[-1]:
+        lista1.append(n1)
+        print('O número foi adicionado no final da lista.')
+    else:
+        for i in range(5):
+            if n1 <= lista1[i]:
+                lista1.insert(i,n1)
+                print(f'O número foi adicionado na posição {i}.')
+                break
+print(lista1)
+
+'''com while no lugar do for do último exemplo:
+    pos = 0
+    while pos < len(lista): #só < e não <= pq conta o zero
+        if n1 <= lista1[pos]:
+            lista.insert(pos, n1)
+            print(f'O número foi adicionado na posição {pos}.')
+            break #Para inserir apenas uma vez
+        pos += 1
+    print(lista1)'''
