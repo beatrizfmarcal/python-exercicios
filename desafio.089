@@ -1,0 +1,45 @@
+python3
+# -*- coding: utf-8 -*-
+
+continua = ''
+geral = []
+nomes = []
+notas = []
+while continua != 'N':
+    nome = str(input('Nome: ')).upper().strip()
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: ' ))
+    continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    nomes.append(nome)
+    notas.append(nota1)
+    notas.append(nota2)
+    nomes.append(notas[:])
+    notas.clear()
+    geral.append(nomes[:])
+    nomes.clear()    
+    while continua not in 'SN':
+        print('\033[31mOpção inválida! Tente novamente.\033[m')
+        continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+print('-'*35)
+print('{:<2} {:<25} {:>4}'.format('Nº', 'NOME', 'MÉDIA')) #depois tentar aspas duplas dentro das simples para usar o f simplificado.
+print('-'*35)
+for m in range(0, len(geral)):
+    média = (geral[m][1][0] + geral[m][1][1]) / 2
+    print('{:<2} {:<25} {:>5.2f}'.format(m, geral[m][0], média))    
+print('-'*35)
+while True:
+    matrícula = int(input('Digite o nº de matrícula para obter as notas do(a) aluno(a) [999 p/ sair]: '))
+    if matrícula < len(geral):
+        print(f'As notas de {geral[matrícula][0]} são {geral[matrícula][1]}.')
+        print('-'*70)
+    if matrícula == 999:
+        break
+    while matrícula < 0 or (matrícula >= len(geral) and matrícula != 999):
+        print('\033[31mNº de matrícula inválido! Tente novamente.\033[m')
+        break
+
+from time import sleep
+
+print('\nFINALIZANDO... ')
+sleep(1)
+print('-FIM-')
