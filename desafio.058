@@ -1,0 +1,35 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n*** JOGO DA ADIVINHAÇÃO ***')
+print('\n\033[35mTente adivinhar que número eu estou pensando!\033[m')
+
+from time import sleep
+from random import randint
+
+pc = randint(0, 10)
+n = int(input('Escolha um número de 0 a 10: ' ))
+palpite = 1
+print('Processando...')
+sleep(1)
+while n != pc:
+    if n < pc:
+        n = int(input('Humm, Mais! Tende de novo: '))
+        palpite += 1
+        print('Processando...')
+        sleep(1)
+    elif n > pc:
+        n = int(input('Humm, Menos! Tende de novo: '))
+        palpite += 1
+        print('Processando...')
+        sleep(1)
+print('\n\033[32mAêêê!!! Você conseguiu vencer com {} palpite(s). Eu também escolhi o número {}.\033[m'.format(palpite, pc))
+
+'''
+acertou = False
+while not acertou:
+    ...
+    if jogador == computador:
+        acertou = True
+'''
+        
