@@ -1,0 +1,15 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('#'*25)
+print('\033[35mPara sair, digite um valor negativo.\033[m')  
+while True:
+    n = int(input('Digite um valor para obter sua tabuada de multiplicação: '))
+    print('-'*60)
+    if n < 0:
+        break 
+    for i in range(0, 10+1):
+        print(f'{n} x {i:2} = {i*n}')
+    print('-'*60)
+print('FIM')
+        
