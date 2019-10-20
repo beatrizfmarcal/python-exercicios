@@ -1,0 +1,7 @@
+python3
+# -*- coding: utf-8 -*-
+
+nome = str(input('Insira seu nome: '))
+print('O nome possui o sobrenome Silva? {}'.format('silva' in nome.lower().split()))
+
+#split() para separar cada palavra do nome para evitar falsos verdadeiros como em 'Silvana'.
