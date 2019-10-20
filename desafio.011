@@ -1,0 +1,8 @@
+python3
+# -*- coding: utf-8 -*-
+
+h = float(input('Qual a altura da parede a ser pintada? '))
+w = float(input('Qual a largura? '))
+a = h*w
+l = a/2
+print('A área de parede a ser pintada equivale a {} metros e será necessário {} litro(s) de tinta.'.format(a, l))
