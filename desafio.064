@@ -1,0 +1,28 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('''
+*Para parar a inserção de números, digite 999.*''')
+n = 0 #pode ser também: n = soma = cont = 0
+soma = 0
+cont = 0
+while n != 999:
+    n = int(input('Insira o número: '))
+    if n != 999:
+        soma += n
+        cont += 1
+print('\nA soma de todos os {} números digitados é {}.'.format(cont, soma))
+        
+####################################################
+
+print('''
+*Para parar a inserção de números, digite 999.*''')
+n1 = 0 #pode ser também: n = soma = cont = 0
+soma1 = 0
+cont1 = 0
+n1 = int(input('Insira o número: '))
+while n1 != 999:
+        soma1 += n1
+        cont1 += 1
+        n1 = int(input('Insira o número: '))
+print('\nA soma de todos os {} números digitados é {}.'.format(cont1, soma1))
