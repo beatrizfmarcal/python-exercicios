@@ -1,0 +1,37 @@
+python3
+# -*- coding: utf-8 -*-
+
+continua = ''
+pessoa = {}
+grupo = []
+while continua != 'N':
+    pessoa['nome'] = str(input('Nome: '))
+    pessoa['sexo'] = str(input('Sexo [M/F]: ')).upper().strip()
+    while pessoa['sexo'] not in 'FM':
+        print('\033[31mOpção inválida! Tente novamente.\033[m')
+        pessoa['sexo'] = str(input('Sexo [M/F]: ')).upper().strip()
+    pessoa['idade'] = int(input('Idade: '))
+    grupo.append(pessoa.copy())
+    continua = str(input('Deseja continuar [S/N]? ')).upper().strip()
+    while continua not in 'SN':
+        print('\033[31mOpção inválida! Tente novamente.\033[m')
+        continua = str(input('Deseja continuar [S/N]? ')).upper().strip()
+print('=-'*35)
+print('No total, foram cadastradas {} pessoas.'.format(len(grupo)))
+somaidade = 0
+for pos in range(0, len(grupo)):
+    somaidade += grupo[pos]['idade'] #tbm poderia ser feito dentro do while.
+print('A média de idade do grupo é de {:.2f} anos.'.format((somaidade / len(grupo))))
+contm = 0
+print('As mulheres cadastradas foram: ', end='')
+for pos in range(0, len(grupo)): #tbm poderia ser for p in grupo: if p['sexo'] == 'F'
+    if grupo[pos]['sexo'] == 'F':
+        print(grupo[pos]['nome'], end='; ')
+        contm += 1
+print('\nForam cadastradas {} mulheres.'.format(contm))
+print('Lista das pessoas que têm idade acima da média: ')
+for pos in range(0, len(grupo)):
+    if grupo[pos]['idade'] > (somaidade / len(grupo)):
+        print(grupo[pos])
+print('\n--FIM--')
+        
