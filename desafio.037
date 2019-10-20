@@ -1,0 +1,18 @@
+python3
+# -*- coding: utf-8 -*-
+
+n = int(input('Digite um número: '))
+conversão = int(input('''Para base binária, digite 1
+Para base octal, digite 2
+Para base hexadecimal, digite 3: '''))
+if conversão == 1:
+    print('\nO número {} em binário é {}.'.format(n, bin(n)[2:]))
+elif conversão == 2:
+    print('\nO número {} em octal é {}.'.format(n, oct(n)[2:]))
+elif conversão == 3:
+    print('\nO número {} em hexadecimal é {}.'.format(n, hex(n)[2:]))
+else:
+    print('\n\033[31mOpção inválida!\033[m')
+    
+# Usar [2:] para não mostrar a indicação do Python da base numérica (0b, 0o e 0x).
+    
