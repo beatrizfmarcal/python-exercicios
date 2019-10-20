@@ -1,0 +1,32 @@
+python3
+# -*- coding: utf-8 -*-
+
+import unidecode
+
+print('\n*** PALÍNDROMO ***')
+p = str(input('Digite uma palavra ou frase: ')).strip().replace(' ', '').upper().replace('.', '').replace(',', '')
+p1 = unidecode.unidecode(p)
+contrário = p1[::-1] #palavra ou frase de trás pra frente
+if p1 == contrário:
+    print('''
+A palavra/frase inserida é um PALÍNDROMO e pode ser lida de trás pra frente:
+{}'''.format(contrário))
+else:
+    print('''
+A palavra/frase inserida NÃO é um PALÍNDROMO e não pode ser lida de trás pra frente:
+{}'''.format(contrário))   
+print('\n---FIM---')
+    
+##############################################
+#Usando o for
+frase = str(input('Digite uma palavra ou frase: ')).strip().upper()
+palavras = frase.split()
+junto = ''.join(palavras)
+inverso = ''
+for letras in range(len(junto)-1, -1, -1): #-1: pq começa a contar do zero, -1: pq o último é zero mas sempre deve colocar um espaço a mais, -1: passo ao contrário
+    inverso += junto[letras]
+if inverso == junto:
+    print('É palíndromo', inverso)
+else:
+    print('Não é palíndromo', inverso)    
+    
