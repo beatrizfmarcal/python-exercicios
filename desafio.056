@@ -1,0 +1,22 @@
+python3
+# -*- coding: utf-8 -*-
+
+média = 0
+contm = 0
+maiorh = 0
+nomevelho = ''
+for c in range(1, 4+1):
+    print('\n*** {}ª pessoa ***'.format(c))
+    nome = str(input('Nome: ')).strip()
+    idade = int(input('Idade: '))
+    sexo = str(input('Sexo M ou F: ')).upper().strip()
+    média += idade
+    if sexo == 'F' and idade < 20:
+        contm += 1
+    elif sexo == 'M':
+        if idade > maiorh:
+            maiorh = idade
+            nomevelho += nome
+print('\nA média de idade do grupo é de {:.2f} anos'.format(média/4))            
+print('Ao todo, são {} mulheres com menos de 20 anos.'.format(contm))
+print('O homem mais velho tem {} anos e seu nome é {}.'.format(maiorh, nomevelho))
