@@ -1,0 +1,11 @@
+python3
+# -*- coding: utf-8 -*-
+
+from math import hypot
+
+catoposto = float(input('Insira a medida do cateto oposto: '))
+catadjacente = float(input('Insira a medida do cateto adjacente: '))
+hipotenusa = ((catoposto**2)+(catadjacente**2))**(1/2)
+print('A hipotenusa do triângulo retângulo referido é {}.'.format(hipotenusa))
+hi = hypot(catoposto, catadjacente)
+print('A hipotenusa é: {}.'.format(hi))
