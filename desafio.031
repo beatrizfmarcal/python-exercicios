@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+distância = float(input('Qual a distância em quilômetros da sua viagem? '))
+if distância <= 200:
+    print('O preço da passagem será de R$ {:.2f}.'.format(distância*0.5))
+else:
+    print('O preço da passagem será de R$ {:.2f}.'.format(distância*0.45))
+print('--FIM--')
+
+#Em menos linhas:
+#preço = distância*0.5 if distância <=200 else distância*0.45
+#print('O preço da passagem será de R$ {:.2f}.'.format(preço))
