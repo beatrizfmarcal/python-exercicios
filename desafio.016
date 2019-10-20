@@ -1,0 +1,7 @@
+python3
+# -*- coding: utf-8 -*-
+
+d = int(input('Por quantos dias o carro foi alugado? '))
+km = float(input('Quantos quilômetros foram percorridos? '))
+v = (60*d) + (0.15*km)
+print('\nO total a ser pago pelo aluguel do carro é de R$ {:.2f}.'.format(v))
