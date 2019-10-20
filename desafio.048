@@ -1,0 +1,11 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n***SOMA DE NÚMEROS ÍMPARES MÚLTIPLOS DE 3 NO INTERVALO DE 1 A 500***')
+soma = 0 #acumulador
+cont = 0 #contador
+for c in range(1, 500+1, 2): #passo para diminuir o trabalho da máquina e retirar os nºs pares.
+    if c % 3 == 0:
+        soma = soma + c
+        cont = cont + 1
+print('\nA soma de todos os {} números ímpares múltiplos de 3 no intervalo de 1 a 500 é \033[4m{}\033[m.'.format(cont, soma))
