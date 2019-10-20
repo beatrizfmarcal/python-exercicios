@@ -1,0 +1,17 @@
+python3
+# -*- coding: utf-8 -*-
+
+from datetime import date
+
+cadastro = {}
+cadastro['Nome'] = str(input('Nome: '))
+nasc = int(input('Ano de nascimento: '))
+cadastro['Idade'] = (date.today().year) - nasc
+cadastro['CTPS'] = int(input('Nº da Carteira de Trabalho [Digite 0 se não possui]: '))
+if cadastro['CTPS'] != 0:
+    cadastro['Contratação'] = int(input('Ano da contratação: '))
+    cadastro['Salário'] = float(input('Salário: R$ '))
+    cadastro['Aposentadoria'] = (cadastro['Contratação'] + 35) - nasc
+print(cadastro)
+for k, v in cadastro.items():
+    print(f'{k}: {v}')
