@@ -1,0 +1,10 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('\n', '*'*8, 'TABUADA', '*'*8)
+n = int(input('Digite um número para obter sua tabuada de multiplicação: '))
+print('\n')
+for c in range(0, 10+1):
+    print('{}  * {:2} = {:2}'.format(n, c, (n * c)))
+print('\n--FIM--')
+    
