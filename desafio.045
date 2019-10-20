@@ -1,0 +1,20 @@
+python3
+# -*- coding: utf-8 -*-
+
+import emoji
+import random
+
+print('\n', '*'*8, 'JOKENPÔ', '*'*8)
+jokenpô = ['pedra', 'papel', 'tesoura']
+pc = random.choice(jokenpô)
+print('\n\033[3;34mVamos jogar Jokenpô?\033[m \n\nAs regras são as seguintes: \n-Pedra ganha de Tesoura; \n-Tesoura ganha de Papel; \n-Papel ganha da Pedra. \n\n\033[35mVamos começar? Eu já escolhi o meu.\033[m')
+humano = str(input('Digite sua arma: ')).strip().lower()
+if (pc == 'pedra' and humano == 'papel') or (pc == 'tesoura' and humano == 'pedra') or (pc == 'papel' and humano == 'tesoura'):
+    print('\nParabéns, você ganhou! Eu escolhi {} e você {}.'.format(pc.upper(), humano.upper()))
+elif (pc == 'papel' and humano == 'pedra') or (pc == 'pedra' and humano == 'tesoura') or (pc == 'tesoura' and humano == 'papel'):
+    print('\nYeah, eu ganhei! Eu escolhi {} e você {}.'.format(pc.upper(), humano.upper()))
+elif (pc == 'pedra' and humano == 'pedra') or (pc == 'papel' and humano == 'papel') or (pc == 'tesoura' and humano == 'tesoura'):
+    print('\nEmpatamos! Nós dois escolhemos {}.'.format(pc.upper()))
+else:
+    print(emoji.emojize('\n\033[31mErro!\033[m :bomb: Talvez tenha algum erro de digitação.', use_aliases=True))
+     
