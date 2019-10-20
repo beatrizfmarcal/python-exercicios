@@ -1,0 +1,43 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('=#'*20)
+título = 'VAMOS JOGAR PAR OU ÍMPAR?'
+print(f'{título:^40}')
+print('=#'*20)
+from random import randint
+contador = 0
+while True:
+    pc = randint(0, 10)
+    n = str(input('-Você escolhe Par ou Ímpar [P/I]? ')).upper().strip()
+    while n not in 'PI':
+        n = str(input('-OPÇÃO INVÁLIDA! Você escolhe Par ou Ímpar [P/I]? ')).upper().strip()
+    humano = int(input('-Escolha seu número de zero a 10 para jogar comigo: '))
+    while humano < 0 or humano > 10:
+        humano = int(input('-OPÇÃO INVÁLIDA! Escolha seu número de zero a 10 para jogar comigo: '))
+    soma = pc + humano
+    if soma % 2 == 0:
+        print('-'*65)
+        print('Você jogou {} e eu joguei {}. A soma deu {}, que é PAR.'.format(humano, pc, soma))
+        if n == 'P':
+            contador += 1
+            print('-'*65)
+            print('Parabéns, você GANHOU! Vamos jogar novamente...')
+        elif n == 'I':
+            print('-'*65)
+            print('Você perdeu...')
+            break
+    elif soma % 2 == 1:
+        print('-'*65)
+        print('Você jogou {} e eu joguei {}. A soma deu {}, que é ÍMPAR.'.format(humano, pc, soma))
+        if n == 'I':
+            contador += 1
+            print('-'*65)
+            print('Parabéns, você GANHOU! Vamos jogar novamente...')
+        elif n == 'P':
+            print('-'*65)
+            print('Você perdeu...')
+            break
+print('=#'*20)
+print('GAME OVER! Você venceu {} vezes.'.format(contador))
+    
