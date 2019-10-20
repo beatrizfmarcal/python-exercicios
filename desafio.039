@@ -1,0 +1,13 @@
+python3
+# -*- coding: utf-8 -*-
+
+from datetime import date
+
+nascimento = int(input('Qual é o ano do seu nascimento? '))
+ano = date.today().year
+if (ano - nascimento) == 18:
+    print('\n\033[4;32mJovem, é o momento de alistar-se!\033[m')
+elif (ano - nascimento) < 18:
+    print('\n\033[34mJovem, ainda falta(m) {} ano(s) para o alistamento militar.\033[m'.format(18 - (ano - nascimento)))
+elif (ano - nascimento) > 18:
+    print('\n\033[4;31mVocê perdeu seu prazo para o alistamento militar, que ocorreu há {} ano(s).\033[m'.format((18 - (ano-nascimento))*(-1)))
