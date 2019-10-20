@@ -1,0 +1,18 @@
+python3
+# -*- coding: utf-8 -*-
+
+preço = float(input('Preço do produto: R$ '))
+pg = int(input('Opções de pagamento: \n1) À vista no dinheiro ou cheque; \n2) À vista no cartão; \n3) Em até 2x no cartão; \n4) 3x ou mais no cartão: '))
+if pg == 1:
+    print('\nO produto terá um desconto de 10%, saindo por R$ {:.2f}.'.format(preço*0.9))
+elif pg == 2:
+    print('\nO produto terá um desconto de 5%, saindo por R$ {:.2f}.'.format(preço*0.95))
+elif pg == 3:
+    print('\nO produto sairá por R$ {:.2f}.'.format(preço))
+    print('Sendo 2 parcelas de R$ {:.2f}.'.format(preço/2))
+elif pg == 4:
+    parcelas = int(input('Em quantas vezes (máximo 12x)? '))
+    print('\nO produto terá um acréscimo de 20% de juros, saindo por R$ {:.2f}.'.format(preço*1.2))
+    print('Sendo {} parcelas de R$ {:.2f}.'.format(parcelas, (preço*1.2)/parcelas))
+else:
+    print('\n\033[31mErro! Digite uma opção válida.\033[m')
