@@ -1,0 +1,27 @@
+python3
+# -*- coding: utf-8 -*-
+
+expressão = list(input('Digite uma expressão matemática: '))
+if (expressão.count('(')) == (expressão.count(')')):
+    print('A expressão inserida é válida.')
+else:
+    print('A expressão inserida não é válida.')
+    
+############################################################
+
+expr = str(input('Digite uma expressão matemática: '))
+pilha = []
+for símbolo in expr:
+    if símbolo == '(':
+        pilha.append('(')
+    elif símbolo == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        elif len(pilha) == 0:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('A expressão inserida é válida.')
+else:
+    print('A expressão inserida não é válida.')
+    
