@@ -1,0 +1,42 @@
+python3
+# -*- coding: utf-8 -*-
+
+maior = 0 
+menor = 0
+for c in range(1, 5+1):
+    peso = float(input('Informe o {}º peso: '.format(c)))
+    if peso > maior:
+        maior = peso 
+    elif peso < menor:
+        menor = peso
+print('\nO maior peso é {}Kg e o menor é {}Kg.'.format(maior, menor))
+#Considera-se que o primeiro peso recebido é tanto o maior como o menor.
+#Conforme vão sendo adicionados novos valores os menores e maiores valores vão mudando.
+
+##########################################################
+
+pesos = [ ] #Os inputs serão colocados dentro da lista []
+for p in range(1,5+1):
+    peso1 = float(input('Digite o {}º peso: '.format(p)))
+    pesos.append(peso1) #Comando para adicionar os inputs à lista.
+print('\nO maior peso é {}Kg'.format(max(pesos)))
+print('\nO menor peso é {}Kg'.format(min(pesos)))
+
+###########################################################
+
+'''
+Versão estendida do primeiro:
+maior = 0
+menor = 0
+for c in range(1, 5+1):
+    peso = float(input('Informe o {}º peso: '.format(c)))
+    if c == 1: #representa o primeiro item do laço
+        maior = peso
+        menor = peso
+    else:
+        if peso > maior:
+            maior = peso #Caso seja maior/menor que o primeiro o valor será substituído.
+        elif peso < menor:
+            menor = peso
+print('\nO maior peso é {}Kg e o menor é {}Kg.'.format(maior, menor))
+'''
