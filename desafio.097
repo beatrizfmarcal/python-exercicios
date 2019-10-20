@@ -1,0 +1,13 @@
+python3
+# -*- coding: utf-8 -*-
+
+def titulo(txt):
+    tamanho = len(txt) + 4
+    print('-' * (tamanho))
+    print('{}'.format(txt.center(tamanho))) #Ou dar 2 espaços antes do texto para ficar na proporção dos 4 a mais.
+    print('-' * (tamanho))
+
+
+titulo('Bartolomeu')
+titulo('Rua')
+titulo('Casa Jacarandá')
