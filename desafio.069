@@ -1,0 +1,31 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('-'*50)
+título = 'CADASTRO DE PESSOAS'
+print(f'{título:^50}')
+print('-'*50)
+c18 = 0
+ch = 0
+cm20 = 0
+while True:
+    idade = int(input('Idade: '))
+    sexo = str(input('Sexo [M/F]: ')).upper().strip()
+    while sexo not in 'MF':
+        sexo = str(input('Sexo [M/F]: ')).upper().strip()
+    print('-'*50)
+    continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    while continua not in 'SN':
+        continua = str(input('Quer continuar [S/N]? ')).upper().strip()
+    if idade >= 18:
+        c18 += 1
+    if sexo == 'M':
+        ch += 1
+    if sexo == 'F' and idade < 20:
+        cm20 += 1            
+    if continua == 'N':
+        break     
+print('============FIM DO CADASTRO============')
+print('''Total de pessoas cadastradas com mais de dezoito anos: {}
+Total de homens cadastrados: {}
+Total de mulheres com menos de vinte anos cadastradas: {}'''.format(c18, ch, cm20))
