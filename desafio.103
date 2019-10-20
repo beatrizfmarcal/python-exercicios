@@ -1,0 +1,18 @@
+python3
+# -*- coding: utf-8 -*-
+
+def ficha(nome=0, gols=0):
+    nome = str(input('Nome do jogador: ')).upper().strip()
+    gols = str(input('Gols marcados: '))
+    if nome is '':
+        nome = '<desconhecido>'
+    if gols is '':
+        gols = 0
+    elif gols.isnumeric() is False:
+        gols = 0
+    elif gols.isnumeric():
+        gols = int(gols)
+    print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')
+        
+
+ficha()
