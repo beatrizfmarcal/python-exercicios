@@ -1,0 +1,19 @@
+python3
+# -*- coding: utf-8 -*-
+
+número = int(input('Digite um número de 0 a 9999: '))
+print('A unidade correspondente ao número é {}.'.format(número%10))
+print('A dezena correspondente ao número é {}.'.format((número//10)%10))
+print('A centena correspondente ao número é {}.'.format((número//100)%10))
+print('A unidade de milhar correspondente ao número é {}.'.format(número//1000))
+
+#################################################
+
+num2 = str(input('Digite um número de 0 a 9999: '))
+num3 = num2.zfill(4)
+print(num3)
+separado = num3.split()
+print('A unidade é {}.'.format(separado[0][3]))
+print('A dezena é {}.'.format(separado[0][2]))
+print('A centena é {}.'.format(separado[0][1]))
+print('A unidade de milhar é {}.'.format(separado[0][0]))
