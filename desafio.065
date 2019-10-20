@@ -1,0 +1,21 @@
+python3
+# -*- coding: utf-8 -*-
+
+print('=#'*15)
+cont = 0
+continua = ''
+maior = 0
+menor = 1
+soma = 0
+while continua != 'N':
+    n = int(input('Digite um número: '))
+    continua = str(input('Deseja continuar [S/N]? ')).upper().strip()[0]
+    while continua not in 'SN':
+        continua = str(input('Digite uma opção válida. Deseja continuar [S/N]? ')).upper().strip()[0]
+    cont += 1
+    soma += n
+    if n > maior:
+        maior = n
+    elif n < menor:
+        menor = n
+print('\nForam inseridos {} números, sendo o maior {}, o menor {} e a média de todos eles {:.2f}.'.format(cont, maior, menor, (soma/cont)))
